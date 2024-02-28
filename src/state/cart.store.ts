@@ -20,17 +20,10 @@ export const useCartState = create<UserCartTypes>((set) => ({
   productsInCart: [],
 
   addProduct: (payload) => {
-    function activateBounceAnimation(state: UserCartTypes) {
-      state.newProduct = true;
-
-      return setTimeout(() => {
-        return false;
-      }, 500);
-    }
 
     set((state) => ({
       ...state,
-      newProduct: activateBounceAnimation(state),
+      newProduct: true,
       productsInCart: [...state.productsInCart, payload],
     }));
   },
