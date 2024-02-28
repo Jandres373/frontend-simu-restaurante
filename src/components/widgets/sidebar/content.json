@@ -1,0 +1,40 @@
+{
+  "options": [
+    {
+      "id": 1,
+      "icon": "home",
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "id": 2,
+      "icon": "table",
+      "name": "Mesa",
+      "url": "/table"
+    },
+    {
+      "id": 3,
+      "icon": "restaurantMenu",
+      "name": "Menu",
+      "url": "/menu"
+    },
+    {
+      "id": 4,
+      "icon": "bell",
+      "name": "Mozo",
+      "url": ""
+    },
+    {
+      "id": 5,
+      "icon": "message",
+      "name": "Reseñas",
+      "url": "reviews"
+    },
+    {
+      "id": 6,
+      "icon": "users",
+      "name": "Nosotros",
+      "url": "about"
+    }
+  ]
+}
