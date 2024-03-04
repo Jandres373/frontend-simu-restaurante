@@ -3,10 +3,11 @@
 import React, { useEffect } from "react";
 import content from "./content.json";
 import Link from "next/link";
+
 import { Text } from "@/components/ui/text";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { useFoodState, FoodStateTypes } from "@/state/foodType.store";
+import { useFoodState } from "@/state/foodType.store";
 
 type Props = {};
 
