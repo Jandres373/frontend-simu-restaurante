@@ -8,7 +8,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function layout({ children,  }: Props) {
+export default function layout({ children  }: Props) {
 
   return (
     <MainPageLayout header={<FoodTypes />} >

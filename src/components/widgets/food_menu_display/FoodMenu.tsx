@@ -1,7 +1,10 @@
 import React from "react";
+
 import { FoodCard } from "./";
 import { API } from "@/fetch/apiConnection";
 import { ProductType } from "@/state/cart.store";
+import { CurrentUser } from "../current_user";
+import { CartModal } from "../cart";
 
 type Props = {};
 
@@ -26,6 +29,8 @@ export async function FoodMenu({}: Props) {
           </ul>
         </div>
       </div>
+      <CurrentUser />
+      <CartModal />
     </div>
   );
 }

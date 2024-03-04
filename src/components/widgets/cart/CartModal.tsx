@@ -5,7 +5,6 @@ import React from "react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -20,7 +19,7 @@ import { ScrollBar } from "@/components/ui/scroll-area";
 
 type Props = {};
 
-export default function CartModal({}: Props) {
+export function CartModal({}: Props) {
   const { productsInCart } = useCartState((state) => state);
   return (
     <Sheet>
