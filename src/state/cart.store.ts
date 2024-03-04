@@ -15,7 +15,7 @@ export type ProductType = {
 export interface UserCartTypes {
   newProduct: boolean;
   productsInCart: ProductType[];
-  addProduct: (payload: ProductType, selectedUser: PersonsType[]) => void;
+  addProduct: (payload: ProductType) => void;
   deleteProduct: (payload: ProductType["id"]) => void;
   deleteAll: (id: ProductType["id"]) => void;
 }
@@ -24,7 +24,7 @@ export const useCartState = create<UserCartTypes>((set) => ({
   newProduct: false,
   productsInCart: [],
 
-  addProduct: (payload, selectedUser) => {
+  addProduct: (payload) => {
     set((state) => {
       const existingProductIndex = state.productsInCart.findIndex(
         (product) => product.id === payload.id
