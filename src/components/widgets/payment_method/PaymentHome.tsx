@@ -1,37 +1,10 @@
-"use client";
-
-import { API } from "@/fetch/apiConnection";
-import { ProductType, useCartState } from "@/state/cart.store";
-import {
-  UseSuccessModalType,
-  useSuccessModal,
-} from "@/state/successModal.store";
 import Link from "next/link";
 import React from "react";
 
 type Props = {};
 
-async function sendOrder(
-  productsInCart: ProductType[],
-  setOpen: UseSuccessModalType["setOpen"]
-) {
-  const productNames = productsInCart.map((product) => product.product_name);
-  const data = {
-    products: productNames,
-    is_paid: false,
-    table_id: 1,
-    user_id: 1,
-  };
-  const res = await API.post("/orders/list_of_orders/", data);
-  console.log(res);
 
-  if (res.Order) {
-    setOpen();
-  }
-}
 export default function PaymentHome({}: Props) {
-  const { productsInCart } = useCartState((state) => state);
-  const { setOpen } = useSuccessModal((state) => state);
 
   return (
     <div
@@ -63,10 +36,7 @@ export default function PaymentHome({}: Props) {
           <button className="text-sm mb-2 w-32 md:w-48 h-10 shadow-xl bg-[#616161] text-white text-center rounded-lg py-2 flex items-center justify-center hover:bg-gray-400 transition duration-500 ">
             <h2>Debito</h2>
           </button>
-          <button
-            onClick={() => sendOrder(productsInCart, setOpen)}
-            className="text-sm mb-2 w-32 md:w-48 h-10 shadow-xl bg-[#616161] text-white text-center rounded-lg py-2 flex items-center justify-center hover:bg-gray-400 transition duration-500 "
-          >
+          <button className="text-sm mb-2 w-32 md:w-48 h-10 shadow-xl bg-[#616161] text-white text-center rounded-lg py-2 flex items-center justify-center hover:bg-gray-400 transition duration-500 ">
             <h2>Efectivo</h2>
           </button>
         </div>

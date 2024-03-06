@@ -8,45 +8,42 @@ import { Text } from "../../ui/text";
 import { ProductsOrdered } from "./ProductsOrdered";
 import { useCartState } from "@/state/cart.store";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useRouter } from "next/navigation";
+import { PaymentModalType } from "@/state/paymentModal.store";
+import { usePaymentModal } from "../../../state/paymentModal.store";
+
+async function sendOrder(setOpen: PaymentModalType["setOpen"]) {
+  setOpen();
+  console.log('me activé')
+}
 
 export const Summary = () => {
   const { productsInCart } = useCartState((state) => state);
-  const [isOpen, setIsOpen] = React.useState(false);
-  const router = useRouter();
+  const { setOpen } = usePaymentModal((state) => state);
 
-  function handleDialog() {
-    setIsOpen(true);
-  }
-
-  function handleCloseDialog() {
-    setIsOpen(false);
-  }
   return (
-    <div className="">
-      <ScrollArea className="w-full h-screen flex flex-col justify-between gap-2 p-10">
-        <Text type="title" className="text-2xl font-bold text-foreground">
+    <div className="h-screen">
+      <ScrollArea className="w-full h-5/6 flex flex-col justify-between gap-2 p-10">
+        <Text type="title" className="text-2xl font-bold text-foreground mb-20">
           {content.pageTitle}
         </Text>
         <ProductsOrdered products={productsInCart} />
 
-        <div className="flex gap-5">
+      </ScrollArea>
+        <div className="flex h-1/6 justify-center gap-5">
           <Button
             variant={"secondary"}
             className="w-96 text-md font-bold self-center"
-            onClick={handleDialog}
+            onClick={()=>sendOrder(setOpen)}
           >
-            {content.actionButton1}
+            confirmar
           </Button>
           <Button
             variant={"outline"}
             className="w-96 text-md font-bold self-center"
-            onClick={() => router.push("/menu")}
           >
-            {content.actionButton2}
+           Seguir ordenando
           </Button>
         </div>
-      </ScrollArea>
     </div>
   );
 };

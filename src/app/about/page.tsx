@@ -12,13 +12,16 @@ const page = () => {
           />
         </div>
 
-        <div className="w-full md:w-auto md:max-w-md lg:max-w-lg pt-3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+        <div className="w-full md:w-auto md:max-w-md lg:max-w-lg text-sm text-start pt-3">
+          Alta Cocina Aurea es un restaurante 5 estrellas que ofrece una
+          experiencia culinaria inolvidable al fusionar la sofisticación gourmet
+          con la tradición asiática. Con una destacada selección de chefs
+          nacionales e internacionales, cada plato es una obra maestra elaborada
+          con ingredientes frescos y técnicas innovadoras. La carta de bebidas
+          ofrece desde licores refinados hasta creaciones sin alcohol, mientras
+          que la música en vivo y los shows diarios añaden un ambiente vibrante.
+          Los postres son verdaderas obras de arte gastronómico, cerrando con
+          broche de oro una experiencia que deleita todos los sentidos.
         </div>
       </div>
 
