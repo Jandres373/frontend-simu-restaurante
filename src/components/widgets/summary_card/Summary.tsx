@@ -47,12 +47,6 @@ export const Summary = () => {
             {content.actionButton2}
           </Button>
         </div>
-
-        <SuccessDialog
-          handleCloseDialog={handleCloseDialog}
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-        />
       </ScrollArea>
     </div>
   );
