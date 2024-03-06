@@ -19,12 +19,6 @@
       "url": ""
     },
     {
-      "id": 4,
-      "icon": "bill",
-      "name": "Cuenta",
-      "url": "/bill"
-    },
-    {
       "id": 5,
       "icon": "message",
       "name": "Reseñas",

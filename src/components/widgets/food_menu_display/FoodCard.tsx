@@ -21,7 +21,7 @@ export function FoodCard({ product }: Props) {
 
   if (product) {
     return (
-      <li className="w-[230px] h-[350px] flex flex-col justify-between">
+      <div className="w-[230px] h-[350px] flex flex-col justify-between">
         <div className="relative w-[220px] h-[191px]">
           {product?.image && (
             <Image
@@ -29,6 +29,7 @@ export function FoodCard({ product }: Props) {
               src={`https://res.cloudinary.com/dbs6ntoya/${product?.image}`}
               alt={product?.product_name}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 220px, 191px"
             />
           )}
         </div>
@@ -46,7 +47,7 @@ export function FoodCard({ product }: Props) {
             +
           </Button>
         </div>
-      </li>
+      </div>
     );
   }
 }

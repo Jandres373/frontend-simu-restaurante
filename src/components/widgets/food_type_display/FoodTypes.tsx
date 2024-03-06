@@ -9,17 +9,21 @@ import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { useFoodState } from "@/state/foodType.store";
 
-type Props = {};
+export type CategoryKey = "lunch" | "dinner" | "snacks" | "breakfast" | "drink";
 
-type CategoryKey = "lunch" | "dinner" | "snacks" | "breakfast" | "drinks";
-
-const categories: Record<CategoryKey, string> = {
-  lunch: "Almuerzos",
-  dinner: "Cenas",
-  snacks: "Meriendas",
-  breakfast: "Desayunos",
-  drinks: "Bebidas",
+export type CategoryMap = {
+  [key: string]: string;
 };
+
+export const categories: CategoryMap = {
+  lunch: "Almuerzo",
+  dinner: "Cena",
+  snacks: "Merienda",
+  breakfast: "Desayuno",
+  drink: "Bebida",
+};
+
+type Props = {};
 
 const variants = {
   initial: { opacity: 0 },

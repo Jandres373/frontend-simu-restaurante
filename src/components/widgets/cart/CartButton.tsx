@@ -2,15 +2,6 @@
 
 import React from "react";
 
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-
 import { useCartState } from "@/state/cart.store";
 import { Icon } from "@/components/ui/icon";
 import { Badge } from "@/components/ui/badge";

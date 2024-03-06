@@ -12,7 +12,11 @@ export default function layout({ children }: Props) {
     <React.Suspense
       fallback={
         <div className="w-full h-full flex justify-center items-center">
-          <Icon  iconName={'spinner'} className="animate-spin text-3xl" size="big"/>
+          <Icon
+            iconName={"spinner"}
+            className="animate-spin text-3xl"
+            size="big"
+          />
         </div>
       }
     >

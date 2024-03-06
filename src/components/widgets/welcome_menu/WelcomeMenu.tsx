@@ -29,6 +29,12 @@ export default function WelcomeMenu({}: Props) {
             </Link>
 
             <Link
+              href={"menu/options?category=drink"}
+              className="text-sm mb-3 w-32 md:w-96 h-10 bg-[#ddc2a5] text-white text-center rounded-2xl py-2 flex items-center justify-center hover:bg-gray-400 transition duration-500 "
+            >
+              <h2 className="text-xl font-bold text-[#a48f7e]">Bebida</h2>
+            </Link>
+            <Link
               href={"menu/options?category=snacks"}
               className="text-sm mb-3 w-32 md:w-96 h-10 bg-[#ddc2a5] text-white text-center rounded-2xl py-2 flex items-center justify-center hover:bg-gray-400 transition duration-500 "
             >
