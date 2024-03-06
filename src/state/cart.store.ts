@@ -1,5 +1,4 @@
 import { create } from "zustand";
-import { PersonsType } from "./persons.store";
 
 export type ProductType = {
   id: number;
