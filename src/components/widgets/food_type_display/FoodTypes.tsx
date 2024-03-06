@@ -65,7 +65,7 @@ export function FoodTypes({}: Props) {
           <li className="mb-3" key={buttons.name}>
             <Link
               href={buttons.url}
-              className="text-sm mx-3 mb-3 w-32 md:w-48 h-10 bg-[#616161] text-white text-center rounded-lg py-6 flex items-center justify-center hover:bg-gray-400 transition duration-500 "
+              className="text-sm mx-3 mb-3 w-32 md:w-48 h-10 bg-card text-white text-center rounded-lg py-6 flex items-center justify-center hover:bg-gray-400 transition duration-500 "
             >
               <Text type="semi-bold">{buttons.name}</Text>{" "}
             </Link>

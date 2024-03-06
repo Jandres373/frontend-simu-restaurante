@@ -1,13 +1,13 @@
 import React from "react";
 
-import { FoodMenu } from "@/components/widgets/food_menu_display";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import WelcomeMenu from "@/components/widgets/welcome_menu/WelcomeMenu";
 
 type Props = {};
 export default function page({}: Props) {
   return (
-    <ScrollArea className="w-full h-[85%] mt-24 flex ">
-      <FoodMenu />
+    <ScrollArea className="w-screen h-screen flex ">
+      <WelcomeMenu />
     </ScrollArea>
   );
 }

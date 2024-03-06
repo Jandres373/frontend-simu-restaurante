@@ -32,7 +32,7 @@ export function CartButton({}: Props) {
           >
           {productsInCart.reduce((acum, product) => acum + (product.quantity || 0), 0)}
         </Badge>
-        <Icon iconName="cart" size="big" />
+        <Icon iconName="fork" size="big" />
       </div>
     </div>
   );

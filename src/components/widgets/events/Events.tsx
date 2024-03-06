@@ -27,12 +27,12 @@ export function Events({}: Props) {
           {content.events.map((event, index) => (
             <Link key={event.id} href={`/events/${event.id}`}>
               <CarouselItem className="md:basis-1/2 lg:basis-1/3 h-full">
-                <div className="relative p-1 w-[500px] h-60 bg-card  rounded-3xl flex justify-center items-center">
+                <div className="relative p-1 w-[360px] h-60 bg-card  rounded-3xl flex justify-center items-center">
                   <Image
                     src={event.image}
                     alt="imagen de producto"
                     fill
-                    className="w-44 h-36 bg-gray-50 rounded-xl aspect-video"
+                    className="w-[360px] h-60 rounded-xl object-contain"
                   />
                 </div>
               </CarouselItem>

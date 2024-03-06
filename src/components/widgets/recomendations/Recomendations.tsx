@@ -67,11 +67,11 @@ export function Recommendations({}: Props) {
                       alt="imagen de producto"
                       width={176}
                       height={144}
-                      className="w-44 h-36 bg-gray-50 rounded-xl aspect-video"
+                      className="w-44  rounded-xl object-contain"
                     />
                     {/* eslint-enable */}
                     <div className="self-start mt-7 ml-5">
-                      <p>{recommendation.name}</p>
+                      <p className="line-clamp-1">{recommendation.name}</p>
                       <div className="flex">
                         {Array.from({ length: recommendation.rating }).map(
                           (_, i) => (
@@ -79,11 +79,12 @@ export function Recommendations({}: Props) {
                               key={i}
                               iconName="star"
                               className="text-yellow-500"
+                              size="big"
                             />
                           )
                         )}
                       </div>
-                      <p className="line-clamp-2">
+                      <p className="line-clamp-2 text-sm">
                         {recommendation.description}
                       </p>
                     </div>

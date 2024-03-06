@@ -6,11 +6,6 @@
       "url": "?category=lunch"
     },
     {
-      "id": "2",
-      "name": "Bebidas",
-      "url": "?category=drinks"
-    },
-    {
       "id": "3",
       "name": "Desayunos",
       "url": "?category=breakfast"
