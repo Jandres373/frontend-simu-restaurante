@@ -1,11 +1,18 @@
+"use client";
+
+import { PaymentModalType, usePaymentModal } from "@/state/paymentModal.store";
 import Link from "next/link";
 import React from "react";
 
 type Props = {};
 
+async function sendOrder(setOpen: PaymentModalType["setOpen"]) {
+  setOpen();
+  console.log("me activé");
+}
 
 export default function PaymentHome({}: Props) {
-
+  const { setOpen } = usePaymentModal((state) => state);
   return (
     <div
       className="flex justify-center items-start min-h-screen bg-cover bg-center relative"
@@ -36,7 +43,10 @@ export default function PaymentHome({}: Props) {
           <button className="text-sm mb-2 w-32 md:w-48 h-10 shadow-xl bg-[#616161] text-white text-center rounded-lg py-2 flex items-center justify-center hover:bg-gray-400 transition duration-500 ">
             <h2>Debito</h2>
           </button>
-          <button className="text-sm mb-2 w-32 md:w-48 h-10 shadow-xl bg-[#616161] text-white text-center rounded-lg py-2 flex items-center justify-center hover:bg-gray-400 transition duration-500 ">
+          <button
+            onClick={() => sendOrder(setOpen)}
+            className="text-sm mb-2 w-32 md:w-48 h-10 shadow-xl bg-[#616161] text-white text-center rounded-lg py-2 flex items-center justify-center hover:bg-gray-400 transition duration-500 "
+          >
             <h2>Efectivo</h2>
           </button>
         </div>

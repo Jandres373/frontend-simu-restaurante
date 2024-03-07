@@ -9,6 +9,7 @@ export default function page({}: Props) {
   return (
     <div className="relative">
       <PaymentHome />
+      <PaymentDialog />
     </div>
   );
 }
